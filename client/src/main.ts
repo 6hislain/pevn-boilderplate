@@ -1,6 +1,7 @@
 import "./style.css";
 import App from "./App.vue";
 import { createApp } from "vue";
+import { createPinia } from "pinia";
 import Home from "./pages/Home.vue";
 import About from "./pages/About.vue";
 import Login from "./pages/Login.vue";
@@ -14,6 +15,10 @@ const routes = [
   { path: "/register", component: Register },
 ];
 
+const app = createApp(App);
+const pinia = createPinia();
 const router = createRouter({ history: createMemoryHistory(), routes });
 
-createApp(App).use(router).mount("#app");
+app.use(pinia);
+app.use(router);
+app.mount("#app");
