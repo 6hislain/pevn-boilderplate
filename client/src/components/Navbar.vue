@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg fixed-top bg-dark" data-bs-theme="dark">
     <div class="container">
-      <a class="navbar-brand" href="#">PEVN Boilerplate</a>
+      <RouterLink class="navbar-brand" to="/">PEVN Boilerplate</RouterLink>
       <button
         class="navbar-toggler"
         type="button"
