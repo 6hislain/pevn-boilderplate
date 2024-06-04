@@ -1,14 +1,22 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A minimal PEVN stack boilerplate",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "ts-node-dev src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "pevn",
+    "postgres",
+    "express",
+    "vue",
+    "node"
+  ],
+  "author": "6hislain",
+  "license": "MIT",
   "dependencies": {
     "bcrypt": "^5.1.1",
     "dotenv": "^16.4.5",
@@ -20,6 +28,10 @@
     "sequelize": "^6.37.3"
   },
   "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.5",
     "sequelize-cli": "^6.6.2"
   }
 }
